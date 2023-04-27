@@ -30,7 +30,9 @@
                     <th scope="row" th:text="${emplList.id}"></th>
                     <td th:text="${emplList.emp_name}"></td>
                     <td th:text="${emplList.emp_address}"></td>
-                    <td th:text="${emplList.emp_number}"></td>
+                    <td th:text="${emplList.emp_number}">  </td>
+                    <td><a th:href="@{/edit/{id} (id=${emplList.id})}"><button>Update</button></a></td>
+
                 </tr>
                 </tbody>
             </table>
