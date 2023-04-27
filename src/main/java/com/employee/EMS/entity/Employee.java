@@ -19,5 +19,6 @@ public class Employee {
     private String emp_name;
     private String emp_address;
     private String emp_number;
+    private String gender;
 
 }

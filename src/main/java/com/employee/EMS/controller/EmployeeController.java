@@ -53,6 +53,7 @@ public class EmployeeController {
         empl.setEmp_name(employee.getEmp_name());
         empl.setEmp_address(employee.getEmp_address());
         empl.setEmp_number(employee.getEmp_number());
+        empl.setGender(employee.getGender());
 
         employeeService.addEmployee(empl);
 
@@ -65,5 +66,6 @@ public class EmployeeController {
         employeeService.deleteById(id);
         return "redirect:/home";
     }
+    
 
 }
