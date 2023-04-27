@@ -11,8 +11,11 @@
     <script src="https://kit.fontawesome.com/b9eb81fa4c.js" crossorigin="anonymous"></script>
     <style>
         a{
-            margin-left: 30px;
             text-decoration: none;
+        }
+        #delete{
+            margin-left: 30px;
+
         }
     </style>
 </head>
@@ -50,7 +53,7 @@
                             <i class="fa-solid fa-pen-to-square"></i>
 
                         </a>
-                        <a th:href="@{/delete/{id} (id=${emplList.id})}">
+                        <a th:href="@{/delete/{id} (id=${emplList.id})}" id="delete">
                             <i class="fa-sharp fa-solid fa-trash"></i>
                         </a>
                     </td>

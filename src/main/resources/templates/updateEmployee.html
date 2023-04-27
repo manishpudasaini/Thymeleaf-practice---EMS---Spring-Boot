@@ -11,43 +11,42 @@
 <body>
 <h1>Employee Management System - Update employee</h1>
 
-<form class="row g-3 needs-validation" th:method="post"
-      th:action="@{~/updateEmp/{id}(id=${singleEmployee.id})}" th:object="${singleEmployee}">
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">Name</label>
-    <input type="text" class="form-control" id="validationCustom01" th:field="*{emp_name}"
-            required th:value="${singleEmployee.emp_name}">
-  </div>
+<div class="container">
+  <form class=" col-md-4 offset-md-4 my-5" th:method="post"
+        th:action="@{~/updateEmp/{id}(id=${singleEmployee.id})}" th:object="${singleEmployee}">
 
-  <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Address</label>
-    <div class="input-group has-validation">
-      <input type="text" class="form-control" id="validationCustomUsername" th:field="*{emp_address}"
+    <div class="mb-3">
+      <label  class="form-label">Employee Name : </label>
+      <input type="text" class="form-control"  aria-describedby="emailHelp" name="emp_name"
+             required th:value="${singleEmployee.emp_name}">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Employee Address : </label>
+      <input type="text" class="form-control"  name= "emp_address"
              aria-describedby="inputGroupPrepend"  required th:value="${singleEmployee.emp_address}">
     </div>
-  </div>
 
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Phone</label>
-    <input type="text" class="form-control" id="validationCustom03"
-           th:field="*{emp_number}" required th:value="${singleEmployee.emp_number}" >
-  </div>
+    <div class="mb-3">
+      <label  class="form-label">Phone Number: </label>
+      <input type="text" class="form-control" id="price" aria-describedby="emailHelp" name="emp_number"
+              required th:value="${singleEmployee.emp_number}">
+    </div>
 
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Male</label>
-    <input type="checkbox"   th:field="*{gender}"
-           name="emp_number" value="male" >
+    <div class="mb-3">
+      <label  class="form-label">Male: </label>
+      <input type="radio"   aria-describedby="emailHelp" name="gender" value="male">
 
-    <label for="validationCustom03" class="form-label">Female</label>
-    <input type="checkbox"  th:field="*{gender}"
-           name="gender" value="female">
-  </div>
+      <label  class="form-label">Female: </label>
+      <input type="radio"   aria-describedby="emailHelp" name="gender" value="female">
+    </div>
 
 
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </div>
-</form>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
+</div>
 
 
 </body>
