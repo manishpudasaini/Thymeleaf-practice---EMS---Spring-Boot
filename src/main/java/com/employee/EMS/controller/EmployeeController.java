@@ -54,6 +54,7 @@ public class EmployeeController {
         empl.setEmp_address(employee.getEmp_address());
         empl.setEmp_number(employee.getEmp_number());
         empl.setGender(employee.getGender());
+        empl.setSkills(employee.getSkills());
 
         employeeService.addEmployee(empl);
 

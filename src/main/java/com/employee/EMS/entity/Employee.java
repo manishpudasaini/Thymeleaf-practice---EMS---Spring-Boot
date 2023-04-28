@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
 @AllArgsConstructor
@@ -20,5 +22,6 @@ public class Employee {
     private String emp_address;
     private String emp_number;
     private String gender;
+    private String skills;
 
 }

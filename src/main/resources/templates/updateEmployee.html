@@ -41,8 +41,20 @@
       <input type="radio"   aria-describedby="emailHelp" th:field="*{gender}" value="female">
     </div>
 
+    <div class="mb-3">
+      <label  class="form-label">Employee Skills: </label>
+      <select th:field="*{skills}" th:value="Skills" >
+        <option value="" disabled>---Select---</option>
+        <option value="Java" th:text="Java"></option>
+        <option value="Python" th:text="Python"></option>
+        <option value="JavaScript" th:text="JavaScript"></option>
+        <option value="Node Js" th:text="NodeJs"></option>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+      </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Update</button>
 
   </form>
 

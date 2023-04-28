@@ -1,7 +1,7 @@
 <!Doctype html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-  <title>Form Validation Example</title>
+  <title>Add Employee Details</title>
   <style>
 
     input{
@@ -40,6 +40,18 @@
 
                 <label  class="form-label">Female: </label>
                 <input type="radio"   aria-describedby="emailHelp" name="gender" value="female">
+            </div>
+
+            <div class="mb-3">
+                <label  class="form-label">Employee Skills: </label>
+                <select name="skills"  th:value="Skills" >
+                    <option value="" disabled>---Select---</option>
+                    <option value="Java" th:text="Java"></option>
+                    <option value="Python" th:text="Python"></option>
+                    <option value="JavaScript" th:text="JavaScript"></option>
+                    <option value="Node Js" th:text="NodeJs"></option>
+
+                </select>
             </div>
 
 

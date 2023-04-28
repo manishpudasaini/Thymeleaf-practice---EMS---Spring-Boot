@@ -36,6 +36,7 @@
                     <th scope="col">Employee Address</th>
                     <th scope="col">Employee Phone</th>
                     <th scope="col">Gender</th>
+                    <th scope="col">Skills</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
@@ -47,6 +48,7 @@
                     <td th:text="${emplList.emp_address}"></td>
                     <td th:text="${emplList.emp_number}">  </td>
                     <td th:text="${emplList.gender}">  </td>
+                    <td th:text="${emplList.skills}">  </td>
 
                     <td>
                         <a th:href="@{/edit/{id} (id=${emplList.id})}">
