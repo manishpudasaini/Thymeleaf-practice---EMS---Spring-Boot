@@ -17,6 +17,19 @@
             margin-left: 30px;
 
         }
+
+
+        tbody tr:nth-child(odd) {
+            background-color: #ff33cc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e495e4;
+        }
+
+        table {
+            background-color: #ff33cc;
+        }
     </style>
 </head>
 <body>
@@ -36,14 +49,14 @@
                     <th scope="col">Employee Address</th>
                     <th scope="col">Employee Phone</th>
                     <th scope="col">Gender</th>
-                    <th scope="col">Skills</th>
+                    <th scope="col">Skill</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr th:each="emplList, index:${employee}">
-                    <th scope="row" th:text="${index.count}"></th>
+                    <td scope="row" th:text="${index.count}"></td>
                     <td th:text="${emplList.emp_name}"></td>
                     <td th:text="${emplList.emp_address}"></td>
                     <td th:text="${emplList.emp_number}">  </td>
